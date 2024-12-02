@@ -1,0 +1,161 @@
+/* Configuration de base */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* En-tête */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bannière */
+.banniere {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banniere img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texte-banniere {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.texte-banniere h1 {
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+}
+
+.texte-banniere p {
+    margin: 0 0 15px;
+}
+
+.texte-banniere .cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.texte-banniere .cta:hover {
+    background-color: #c0392b;
+}
+
+/* Section présentation */
+.presentation {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #ecf0f1;
+}
+
+.presentation h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.presentation p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section informations */
+.infos {
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.infos h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.infos p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Pied de page */
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .texte-banniere h1 {
+        font-size: 2rem;
+    }
+
+    .presentation h2 {
+        font-size: 1.5rem;
+    }
+
+    .infos h3 {
+        font-size: 1.2rem;
+    }
+}

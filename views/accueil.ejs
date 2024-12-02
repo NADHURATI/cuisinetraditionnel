@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant proposant une cuisine authentique et raffinée.">
+    <title>nodejs serveur</title>
+    <link rel="stylesheet" src="css/styles.css">
+    
+</head>
+
+<body>
+    <%- include("navbar") -%>
+
+    <h1>Bienvenu chez Nous.</h1>
+    <% utilisateur.nom.forEach(n => { %> <!-- Utilisateur.nom viens de app.js -->
+        <h3><%= utilisateur.maSalutation+ " "+ n %> </h3> <!-- n c'est pour récupérer un des noms dans mon tableau-->
+    <% }) %>
+
+    <!-- En-tête avec logo et navigation -->
+    
+    <!-- Bannière principale -->
+    <section class="banniere">
+
+        <img src="image/le-restaurant.jpg" alt="Restaurant">
+
+        <div class="texte-banniere">
+            <h1>Bienvenue chez [la petite rose]</h1>
+            <p>Découvrez notre cuisine authentique et savoureuse.</p>
+            <a href="menu.html" class="cta">Voir le menu</a>
+        </div>
+
+    </section>
+
+    <!-- Présentation rapide -->
+    <section class="presentation">
+        <h2>À propos de nous</h2>
+        <p>Notre restaurant vous propose une expérience culinaire unique, alliant tradition et innovation. Nos plats sont préparés avec des ingrédients frais et locaux.</p>
+    </section>
+
+    <!-- Informations pratiques -->
+    <section class="infos">
+
+        <h3>Informations</h3>
+    
+        <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+        <p><strong>Horaires :</strong> Lundi - Samedi: 12h - 22h</p>
+
+    </section>
+
+     <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 [Nom du Restaurant] - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

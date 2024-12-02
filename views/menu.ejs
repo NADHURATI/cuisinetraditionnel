@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre menu avec une sélection de plats délicieux et variés.">
+    <title>Menu - Restaurant</title>
+    <link href="css/menu.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <h1> Nos menu du jour </h1>
+
+        <% plats.nom.forEach( n => { %> 
+            <h3> <%= n %> </h3> 
+            <% }) %>
+
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo du Restaurant">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="menu">Menu</a></li>
+                <li><a href="equipe">Équipe</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Exemple de section Menu -->
+
+    <section class="menu">
+
+        <h2>Notre Menu</h2>
+        
+        <!-- Nos plats -->
+        <div class="plat">
+            <h3>Entrée : thé au gingembre</h3>
+            <img src="image/the-au-gingembre.jpeg" alt="The au gingembre">
+            <p>Thé au gingembre bien chaud, idéale pour commencer votre repas.</p>
+            <p><strong>Prix :</strong> 2€</p>
+        </div>
+        
+        <div class="plat">
+            <h3>Plat principal : Mtsolola à la viande </h3>
+            <img src="image/744_BVMHH4L9HXEU233B.jpg" alt="Mtsolola à la viande">
+            <p>Le mtsolola à la viande est un plat délicieux préparé avec de la viande tendre, des légumes frais et des épices riches. Ce mélange des saveurs nous rappelle les rapas traditionnels qui réchauffent les coeur et les âmes.</p>
+            <p><strong>Prix :</strong> 12€</p>
+        </div>
+
+        <div class="plat">
+            <h3>Dessert : Ma Karara</h3>
+            <img src="image/maxresdefault.jpg" alt="Ma Karara">
+            <p>Le ma karara en version Dessert est une délicieuse préparation sucrée, parfumée avec des épices et une touche douceur. Une expérience gourmande à ne pas manquer pour finir votre repas en beauté.</p>
+            <p><strong>Prix :</strong> 2€</p>
+        </div>²
+
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 [la petite rose] - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

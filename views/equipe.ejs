@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rencontrez l'équipe passionnée derrière [Nom du Restaurant].">
+    <title>Notre Équipe - Restaurant</title>
+    <link href="css/equipe.css" rel="stylesheets">
+</head>
+
+<body>
+
+    <header>
+    
+        <!-- logo du restaurant -->
+        <div class="logo">
+            <img src="image/th.jpeg" alt="Logo du Restaurant">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="menu">Menu</a></li>
+                <li><a href="equipe">Équipe</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <% personnel.forEach( p => { %>
+        <h3> <%= p.nom %> </h3>    
+    <% }) %>
+
+    <!-- Exemple de section equipe -->
+    <section class="equipe">
+
+        <!-- Nos equipe -->
+        <h2>Notre Équipe</h2>
+
+        <div class="membre">
+            <img src="image/chef-2-scaled.jpg" alt="Chef">
+            <h3>Ibrahim COMBO</h3>
+            <p>Irahim est le cœur de notre cuisine, créant des plats d'exception avec passion.</p>
+        </div>
+
+        <div class="membre">
+            <img src="image/istockphoto-1359352273-170667a.jpg" alt="serveuse">
+            <h3>Marie Inèss</h3>
+            <p>Marie est notre serveuse experte, veillant à ce que chaque client se sente bienvenu.</p>
+        </div>
+
+        <div class="membre">
+            <img src="image/sommelier.jpg" alt="Sommelier">
+            <h3>Youness Bacar</h3>
+            <p>Youness sélectionne les meilleurs jus et boissons pour accompagner vos repas.</p>
+        </div>
+
+    </section>
+
+     <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 [la petite rose] - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

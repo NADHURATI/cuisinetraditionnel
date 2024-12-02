@@ -1,0 +1,25 @@
+// Le format json
+// JSON = JavaScipt Objet Notation
+{
+    "nom": "ALI",
+    "prenom": "Nadhurati",
+    "village": "CRG"
+}
+
+{
+    objet
+    {
+        "name": "jack",
+        "age":21,
+        "car":"BMW",
+        "city":"New York"
+    },
+
+    {
+        "name":"Said",
+        "age":22,
+        "car":"Audi",
+        "city":"New York"
+
+    }
+}

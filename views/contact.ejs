@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-nous pour toute question, réservation ou information.">
+    <title>Contact - Restaurant</title>
+    <link href="css/contact.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        
+        
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo du Restaurant">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="accueil">Accueil</a></li>
+                <li><a href="menu">Menu</a></li>
+                <li><a href="equipe">Équipe</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- information de contact supplémentaires -->
+
+    <section class="contact">
+
+        <h2>Contactez-nous</h2>
+
+        <form action="submit_contact_form.php" method="POST">
+            <!-- champ pour le nom -->
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <!-- champ pour le prenom -->
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <!-- champ pour Email -->
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- champ pour message -->
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+         <!-- Informations de contact -->
+        <h1> Nos Contact</h1>
+
+            <h3> <%= coordonnees.numero %></h3>  <!-- je veux récupéré le numéro-->
+            <h3> <%= coordonnees.horaire %></h3> <!-- je veux récupéré les horaires -->
+        
+    </section>
+
+     <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 [la petite rose] - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
