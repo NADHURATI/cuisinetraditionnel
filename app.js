@@ -1,10 +1,24 @@
 /// ici, import du frameword ExpressJS
 const express = require("express");
+const mysql = require("mysql");
 const url = require("url");
 const fs = require("fs");
+const myConnection = require("express-myconnection");
+
+const optionConnection = {
+    host: "localhost",
+    user: "root",
+    password: "tanzelmy03@a",
+    port: 3306,
+    database: "restaurant",
+};
 
 // Je crée mon application ExpressJS
 const app = express();
+
+// Middleware de connection à la base de données
+// 'pool' est la statégie de connection à la base de données
+app.use(myConnection( optionConnection, "pool"));
 
 // L'endroit ou se situent les vues qui saffichent sur la navigateur
 app.set("views", "./views");
