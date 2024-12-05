@@ -10,13 +10,9 @@
 
 <body>
 
+    <%- include("navbar") -%>
+
     <header>
-
-        <h1> Nos menu du jour </h1>
-
-        <% plats.nom.forEach( n => { %> 
-            <h3> <%= n %> </h3> 
-            <% }) %>
 
         <div class="logo">
             <img src="image/logo.png" alt="Logo du Restaurant">
@@ -32,6 +28,28 @@
         </nav>
 
     </header>
+
+    <h1> Nos menu du jour </h1>
+ 
+        <div>
+
+         <% resultat.forEach(r => { %>
+            <p><%= r.nom %></p> <!-- le nom du plat-->
+            <span><%= r.prix %>€ </span> <!-- le prix du plat-->
+            <input type="button" value="Supprimer" onclick="SupprimerDonnees('<%= plat.id %>')"> <!-- le boutton supprimer-->
+            <input type="button" value="Modifier" onclick="rempliDoonees('<%= plat.id %>', '<%= plat.nom %>', '<%= plat.prix %>')"
+        </div>
+        <% }); %>
+
+    <h3> Créer un nouveau plat</h3>
+    <form action="/plat" methode="post">
+        <input type="hidden" name="id" id="id">
+        <label for="nomplat">Nom du plat:</label>
+        <input type="text" id="nomplat" name="nom"></input><br>
+        <label for="prixplat">prix</label><br>
+        <input type="number" id="prix" name="prix"><br><br>
+        <input type="submit" value="Enregistrer">
+    </form>
 
     <!-- Exemple de section Menu -->
 
@@ -63,11 +81,26 @@
 
     </section>
 
-    <!-- Pied de page -->
-    <footer>
-        <p>&copy; 2024 [la petite rose] - Tous droits réservés.</p>
-    </footer>
-
+    <!-- inclure le footer -->  
+    <%- include("footer") -%>
+    
 </body>
+<script>
+    function rempliDoonees(id,nom,prix){
+        document.querySelector("#id").value = id;
+        document.querySelector("#nomplat").value = nom;
+        document.querySelector("#prix").value = prix;
+    }
+    function suprimerDonnees(id) {
+        let routeComplete = "plat/" + id;
 
+        fetch(
+            routeComplete, {method : "DELETE"}
+        ) .then (
+            (response) => response.json()
+        ) .then (
+            (donnee) => window.location.href = donnee.routeRacine
+        )
+    }
+</script>
 </html>
