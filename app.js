@@ -23,6 +23,15 @@ app.use(myConnection(mysql2, optionConnection, "pool"));
 
 app.use(express.urlencoded({extended: false}));
 
+CREATE TABLE chanteur(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT 
+    nom VARCHAR(155),
+    rolr VARCHAR(180),
+);
+
+
+
+
 // L'endroit ou se situent les vues qui saffichent sur la navigateur
 app.set("views", "./views");
 
@@ -193,5 +202,17 @@ app.delete("/plat/:id", (req,res) => {
 module.exports = app;
 
 
+
+
+
+
+
+ CREATE TABLE chanson(
+     id INT PRIMARY KEY AUTO_INCREMENT,
+     titre VARCHAR(155),
+     date_sortie DATE,
+     id_chanteur INT
+     FOREIGN KEY(id_chanteur) REFERENCES chanteur(id)
+     );
 
 
